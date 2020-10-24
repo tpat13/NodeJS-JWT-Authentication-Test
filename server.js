@@ -81,6 +81,12 @@ app.get('/api/prices', jwtMW, (req, res) =>{
     });
 });
 
+app.get('/api/settings', jwtMW, (req, res) =>{
+    res.json({
+        success: true,
+        myContent: 'You are accessing settings!'
+    });
+});
 
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'index.html'));
